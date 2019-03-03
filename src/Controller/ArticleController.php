@@ -8,7 +8,6 @@ use Symfony\Component\Cache\Adapter\AdapterInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Response;
 
 class ArticleController extends AbstractController
 {
@@ -58,6 +57,8 @@ EOF;
         }
 
         $articleContent = $item->get();
+
+        dump($markdown);die;
  
         return $this->render('article/show.html.twig', [
             'title' => ucwords(str_replace('-', ' ', $slug)),
