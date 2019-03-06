@@ -3,7 +3,7 @@ $(document).ready(function() {
         e.preventDefault();
 
         var $link = $(e.currentTarget);
-        $link.toggleClass('fa-heart-o fa-heart');
+        $link.toggleClass('far fas');
 
         $.ajax({
             method: 'POST',
